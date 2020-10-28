@@ -63,7 +63,7 @@ Public Class Form1
     ''' <param name="boundary">boundary.</param>
     ''' <param name="FilePath">The path of the file we will send.</param>
     ''' <param name="FormFields">The Form-Data to put it in the multipart/form-data.</param>
-    ''' <returns>The Value of response body.</returns>
+    ''' <returns>multipart/form-data Stream.</returns>
     Public Function CreateMultipartData(boundary As String, FilePath As String, FormFields As NameValueCollection) As MemoryStream
         Dim FileContent As New FileStream(FilePath, FileMode.Open, FileAccess.Read)
         Dim meStream As New MemoryStream()
