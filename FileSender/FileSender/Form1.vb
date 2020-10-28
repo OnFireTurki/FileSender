@@ -99,9 +99,9 @@ Public Class Form1
         If String.IsNullOrEmpty(FileNameBox.Text) Then MsgBox("The File is missing!") : Exit Sub
         Button2.Enabled = False
         If RadioButton1.Checked AndAlso (String.IsNullOrEmpty(TokenBox.Text) Or String.IsNullOrEmpty(IDBox.Text)) Then
-            MsgBox("Something is missing ! <Bot Token or chat id>")
+            MsgBox("Something is missing ! <Bot Token or chat id>") : Exit Sub
         ElseIf RadioButton2.Checked AndAlso String.IsNullOrEmpty(TokenBox.Text) Then
-            MsgBox("Webhook url is Missing!")
+            MsgBox("Webhook url is Missing!") : Exit Sub
         End If
         Dim th As New Thread(New ThreadStart(Sub()
                                                  Dim response As String : Dim url As String : Dim Formdata As New NameValueCollection()
