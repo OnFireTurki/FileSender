@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+FileSender
+</name>
+</assembly>
+<members>
+<member name="T:FileSender.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:FileSender.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:FileSender.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:FileSender.Form1.SendPost(System.String,System.Collections.Specialized.NameValueCollection)">
+ <summary>
+ Send Http post request to send txt file and return the response body.
+ </summary>
+ <param name="Url">The Url that we will send the request to it.</param>
+ <param name="FormFields">The Form-Data for request body.</param>
+ <returns>The Value of response body.</returns>
+</member>
+<member name="M:FileSender.Form1.CreateMultipartData(System.String,System.String,System.Collections.Specialized.NameValueCollection)">
+ <summary>
+ Create multipart/form-data and return it.
+ </summary>
+ <param name="boundary">boundary.</param>
+ <param name="FilePath">The path of the file we will send.</param>
+ <param name="FormFields">The Form-Data to put it in the multipart/form-data.</param>
+ <returns>The Value of response body.</returns>
+</member>
+</members>
+</doc>
